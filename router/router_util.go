@@ -24,7 +24,7 @@ func (util *RouteUtil) MatchService(key string) interface{} {
 }
 
 // customize func
-func (util *RouteUtil) parseHostPath(hosts []string, paths []string, svc interface{}) bool {
+func (util *RouteUtil) ParseHostPath(hosts []string, paths []string, svc interface{}) bool {
 	if hosts == nil || paths == nil {
 		return false
 	}
