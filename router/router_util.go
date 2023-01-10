@@ -23,6 +23,10 @@ func (util *RouteUtil) MatchService(key string) interface{} {
 	return util.trie.Get("/" + strings.TrimPrefix(key, "kpi"))
 }
 
+func (util *RouteUtil) clear() {
+	util.trie = NewPathTrie()
+}
+
 // customize func
 func (util *RouteUtil) ParseHostPath(hosts []string, paths []string, svc interface{}) bool {
 	if hosts == nil || paths == nil {
