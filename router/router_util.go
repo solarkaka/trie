@@ -23,7 +23,7 @@ func (util *RouteUtil) MatchService(key string) interface{} {
 	return util.trie.Get("/" + strings.TrimPrefix(key, "kpi"))
 }
 
-func (util *RouteUtil) clear() {
+func (util *RouteUtil) Clear() {
 	util.trie = NewPathTrie()
 }
 
